@@ -1,0 +1,44 @@
+[alias]
+	s = status -s
+	lg = log --oneline --decorate --all --graph
+	co = checkout
+	br = branch
+[core]
+	excludesfile = /Users/duncansmith/.gitignore_global
+	editor = nvim
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "nvimdiffc"]
+  cmd = "nvim  -d $MERGED $LOCAL $BASE $REMOTE -c 'wincmd J | wincmd ='"
+[rerere]
+	enabled = true
+[rebase]
+	autosquash = true
+[init]
+	defaultBranch = main
+[merge]
+	tool = nvimdiffc
+	conflictstyle = diff3
+[mergetool]
+	keepBackup = false
+[credential "https://github.com"]
+	helper = 
+	helper = !/usr/local/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper = 
+	helper = !/usr/local/bin/gh auth git-credential
+[commit]
+	gpgsign = true
+[url "https://github.com/"]
+	insteadOf = git@github.com:
+	insteadOf = ssh://git@github.com
+	insteadOf = ssh://git@github.com/
+
+[include]
+  path = config.local
