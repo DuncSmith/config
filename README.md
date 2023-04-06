@@ -8,5 +8,5 @@
 ### Install
 
 ```shell
-curl -Lks https://raw.githubusercontent.com/DuncSmith/config/master/bin/install.sh | /bin/bash
+curl -Lks https://raw.githubusercontent.com/DuncSmith/config/main/bin/install.sh | /bin/bash
 ```
