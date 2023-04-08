@@ -7,12 +7,14 @@ uatt() {
     boldecho "Updating Apt"
     sudo apt update
     sudo apt upgrade -y
+    suso apt autoremove -y
   fi
 
   if [ -x "$(command -v brew)" ]; then
     boldecho "Updating Brew"
     brew update
     brew upgrade
+    brew cleanup
   fi
 
   if [[ -n "$(command -v asdf)" ]]; then
