@@ -7,7 +7,7 @@ uatt() {
     boldecho "Updating Apt"
     sudo apt update
     sudo apt upgrade -y
-    suso apt autoremove -y
+    sudo apt autoremove -y
   fi
 
   if [ -x "$(command -v brew)" ]; then
