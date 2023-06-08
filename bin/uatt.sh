@@ -17,6 +17,11 @@ uatt() {
     brew cleanup
   fi
 
+  if [ -x "$(command -v jamf)" ]; then
+    boldecho "Running Jamf updates"
+    jamf runSoftwareUpdate
+  fi
+
   if [[ -n "$(command -v asdf)" ]]; then
     boldecho "Updating asdf"
     asdf plugin-update --all

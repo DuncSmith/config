@@ -14,6 +14,7 @@ alias hc='gh pr view --web'
 alias lvim='/Users/duncansmith/.local/bin/lvim'
 alias amend='git commit --amend --no-edit'
 alias devenv='devkit env'
+alias ld='lazydocker'
 
 # Config/dotfile management
 # alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'

@@ -4,7 +4,7 @@
 	co = checkout
 	br = branch
 [core]
-	editor = nvim
+	editor = code -w
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
