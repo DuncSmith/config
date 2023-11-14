@@ -58,3 +58,4 @@ custom_plan.rb
 std_*.txt
 .solargraph.yml
 lazy-lock.json
+*.code-workspace

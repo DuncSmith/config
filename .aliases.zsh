@@ -15,6 +15,7 @@ alias lvim='/Users/duncansmith/.local/bin/lvim'
 alias amend='git commit --amend --no-edit'
 alias devenv='devkit env'
 alias ld='lazydocker'
+alias pybash='docker run -it --rm -v ${PWD}:/app -w /app python:3.8 bash'
 
 # Config/dotfile management
 # alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'

@@ -17,14 +17,19 @@ uatt() {
     brew cleanup
   fi
 
-  if [ -x "$(command -v jamf)" ]; then
-    boldecho "Running Jamf updates"
-    jamf runSoftwareUpdate
-  fi
-
   if [[ -n "$(command -v asdf)" ]]; then
     boldecho "Updating asdf"
     asdf plugin-update --all
+  fi
+
+  if [[ -n "$(command -v devkit)" ]]; then
+    gum confirm --timeout 5s "Update devenv?" && devkit env update
+    gum confirm --timeout 5s "Update devkit?" && devkit update --yes
+  fi
+
+  if [[ -n "$(command -v gem)" ]]; then
+    boldecho "Updating Ruby-lsp gem"
+    gem install ruby-lsp
   fi
 }
 
