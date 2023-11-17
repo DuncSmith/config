@@ -50,6 +50,8 @@ autoload -Uz compinit && compinit
 # eval "$(direnv hook zsh)"
 source ~/powerlevel10k/powerlevel10k.zsh-theme
 # source "${XDG_CONFIG_HOME:-$HOME/.config}/asdf-direnv/zshrc"
+#
+eval "$(_POLICY_SENTRY_COMPLETE=source_zsh policy_sentry)"
 
 export GITHUB_TOKEN=$(gh auth token)
 export GITHUB_OAUTH_TOKEN=$(gh auth token)

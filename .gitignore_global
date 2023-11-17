@@ -59,3 +59,4 @@ std_*.txt
 .solargraph.yml
 lazy-lock.json
 *.code-workspace
+crud.yml
