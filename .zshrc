@@ -11,14 +11,8 @@ fi
 [ -f ~/bin/uatt.sh ] && source ~/bin/uatt.sh
 [ -f ~/bin/config-mgmt.sh ] && source ~/bin/config-mgmt.sh
 
-source "$(brew --prefix asdf)/libexec/asdf.sh"
-
 export VISUAL=/usr/local/bin/nvim
 export EDITOR="$VISUAL"
-
-export AWS_VAULT_KEYCHAIN_NAME=login
-export AWS_VAULT_PROMPT=osascript
-export AWS_SDK_LOAD_CONFIG=1
 
 # bind Home and End keys
 bindkey '\e[H'    beginning-of-line
@@ -47,8 +41,8 @@ autoload -Uz compinit && compinit
 
 eval "$(_POLICY_SENTRY_COMPLETE=source_zsh policy_sentry)"
 
-export GITHUB_TOKEN=$(gh auth token)
-export GITHUB_OAUTH_TOKEN=$(gh auth token)
+# export GITHUB_TOKEN=$(gh auth token)
+# export GITHUB_OAUTH_TOKEN=$(gh auth token)
 
 # Source automated FreeAgent shell config
 source /Users/duncansmith/.freeagent_shell_profile
@@ -56,6 +50,12 @@ source /Users/duncansmith/.freeagent_shell_profile
 ### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
 export PATH="/Users/duncansmith/.rd/bin:$PATH"
 ### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
+
+export PATH="/Users/duncansmith/go/bin:$PATH"
+export PATH="/usr/local/opt/mysql@8.0/bin:$PATH"
+
+eval "$(gh copilot alias -- zsh)"
+eval "$(/Users/duncansmith/.local/bin/mise activate zsh)"
 source /usr/local/share/powerlevel10k/powerlevel10k.zsh-theme
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.

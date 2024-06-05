@@ -4,7 +4,7 @@
 	co = checkout
 	br = branch
 [core]
-	editor = code -w
+	editor = vim
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
@@ -25,7 +25,6 @@
 	keepBackup = false
 [url "https://github.com/"]
 	insteadOf = git@github.com:
-	insteadOf = ssh://git@github.com
 	insteadOf = ssh://git@github.com/
 [push]
 	authSetupRemote = true

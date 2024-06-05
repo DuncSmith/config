@@ -19,7 +19,6 @@
 *.tar
 *.zip
 *.gem
-
 # Logs and databases #
 ######################
 *.log
@@ -60,3 +59,5 @@ std_*.txt
 lazy-lock.json
 *.code-workspace
 crud.yml
+.mise.local.toml
+.mise.*.local.toml

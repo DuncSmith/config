@@ -1,9 +1,22 @@
-return {
-  { "EdenEast/nightfox.nvim" },
-  {
-    "LazyVim/LazyVim",
-    opts = {
-      colorscheme = "nightfox",
-    },
-  }
-}
+return {}
+-- return {
+--   { "diegoulloao/neofusion.nvim" },
+--
+--   {
+--     "LazyVim/LazyVim",
+--     opts = {
+--       colorscheme = "neofusion",
+--     },
+--   },
+-- }
+
+-- return {
+--   { "EdenEast/nightfox.nvim" },
+--
+--   {
+--     "LazyVim/LazyVim",
+--     opts = {
+--       colorscheme = "nightfox",
+--     },
+--   },
+-- }
