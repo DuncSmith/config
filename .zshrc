@@ -58,5 +58,8 @@ eval "$(gh copilot alias -- zsh)"
 eval "$(/Users/duncansmith/.local/bin/mise activate zsh)"
 source /usr/local/share/powerlevel10k/powerlevel10k.zsh-theme
 
+# rust - rustup
+. "$HOME/.cargo/env"
+
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
