@@ -16,6 +16,9 @@ alias amend='git commit --amend --no-edit'
 alias devenv='devkit env'
 alias ld='lazydocker'
 alias pybash='docker run -it --rm -v ${PWD}:/app -w /app python:3.8 bash'
+alias tx=tmuxinator 
+alias cicosts='assume fa-ci-prod -s ce'
+alias intcosts='assume fa-app-int -s ce'
 
 # Config/dotfile management
 # alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'

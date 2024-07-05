@@ -39,7 +39,7 @@ zstyle ':completion:*:*:git:*' script ~/.zsh/git-completion.bash
 fpath=(~/.zsh $fpath)
 autoload -Uz compinit && compinit
 
-eval "$(_POLICY_SENTRY_COMPLETE=source_zsh policy_sentry)"
+# eval "$(_POLICY_SENTRY_COMPLETE=source_zsh policy_sentry)"
 
 # export GITHUB_TOKEN=$(gh auth token)
 # export GITHUB_OAUTH_TOKEN=$(gh auth token)
@@ -63,3 +63,6 @@ source /usr/local/share/powerlevel10k/powerlevel10k.zsh-theme
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+export AWS_VAULT_KEYCHAIN_NAME=login
+export AWS_VAULT_PROMPT=osascript
+export AWS_SDK_LOAD_CONFIG=1

@@ -1,12 +1,4 @@
 return {
-  -- This also requires a filetype to be added in the options.lua file
-  -- vim.filetype.add({
-  --   pattern = {
-  --     [".*/.github/workflows/.*%.yml"] = "yaml.ghaction",
-  --     [".*/.github/workflows/.*%.yaml"] = "yaml.ghaction",
-  --   },
-  -- })
-
   {
     "mfussenegger/nvim-lint",
     opts = {
@@ -21,11 +13,27 @@ return {
           [".*/.github/workflows/.*%.yaml"] = "yaml.ghaction",
         },
       })
+
+      -- Support workflow-call issue types
+      local lint = require("lint")
+      local al = lint.linters.actionlint
+      al.args = { "-format", "{{json .}}", "-stdin-filename", "-" }
     end,
   },
 
   {
     "williamboman/mason.nvim",
     opts = { ensure_installed = { "actionlint" } },
+  },
+
+  {
+    "neovim/nvim-lspconfig",
+    opts = {
+      servers = {
+        yamlls = {
+          filetypes = { "yaml", "yaml.docker-compose", "yaml.gitlab", "yaml.ghaction" },
+        },
+      },
+    },
   },
 }
